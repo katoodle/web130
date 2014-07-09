@@ -37,6 +37,7 @@ body{
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  padding-left:0;
 }
 
 #main-menu ul li:hover ul{
