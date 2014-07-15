@@ -4,7 +4,7 @@ Nitrous.IO enables you to develop web applications completely in the
 cloud. This development "box" helps you write software, collaborate
 real-time with friends, show off apps to teammates or clients, and
 deploy apps to production hosting sites like Heroku or Google App
-Engine.
+Engine.  kt's
 
 ## Getting Started
 
