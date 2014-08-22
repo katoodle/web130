@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>form validation</title>
+    
+     <!--   cutom styles   -->
+     <link rel="stylesheet" href="css/styles.css">
+    
+     <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+     <!--   parsely depends on jquery so this order is important, custom scripts last   -->
+     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+     <script type="text/javascript" src="js/parsley.min.js"></script>
+    
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+ </head>
+  
+ <body>
+   <h1>My Questionnaire for You!</h1>
+   
+   <form id="myNewForm" name="myNewForm" action="form_handler.php" method="POST">
+
+       <p>
+         <label for="fName">First Name:
+           <input type="text" id="fName" name="fName" data-parsley-required="true">
+         </label>
+       </p>
+     
+       <p>
+         <label for="lname">Last Name:
+           <input type="text" id="lname" name="lname" data-parsley-required="true">
+         </label>
+       </p>
+     
+       <p>
+         <label for="address">Address:
+           <input type="text" id="address" name="address" data-parsley-required="true">
+         </label>
+       </p>
+     
+       <p>
+         <label for="city">City:
+             <select id="city" data-parsley-required="true">
+              <option value="">Choose..</option>
+              <option value="springfield">Springfield</option>
+              <option value="london">London</option>
+              <option value="urbana">Urbana</option>
+              <option value="paris">Paris</option>
+            </select>
+         </label>
+       </p>
+     
+       <p>
+         <label for="zip">Zipcode:
+           <input type="text" id="zip" name="zip" data-parsley-required="true" data-parsley-type="digits" data-parsley-range="[5, 5]">
+         </label>
+       </p>
+     
+       <p>
+         <label for="email-1">Email:
+           <input type="text" id="email-1" name="email-1" data-parsley-required="true" data-parsley-type="email">
+         </label>
+       </p>
+     
+       <p>
+         <label for="email-2">Re-enter Email:
+           <input type="text" id="email-2" name="email-2" data-parsley-required="true" data-parsley-type="email" data-parsley-equalto="#email-1">
+         </label>
+       </p>
+     <p>
+         <label for="phone">Phone:
+           <input type="text" id="phone" name="phone" data-parsley-required="true" data-parsley-type="phone">
+         </label>
+       </p>
+     
+       <p>
+         <label for="food">Do you like any of these foods?:</label>
+          Pizza <input type="checkbox" name="food" id="pizza" value="pizza" data-parsley-mincheck="1" data-parsley-required="true" checked>
+          Popcorn <input type="checkbox" name="food" value="popcorn">
+          Tacos <input type="checkbox" name="food" value="tacos">
+          Salad <input type="checkbox" name="food" value="salad">
+          Artichoke <input type="checkbox" name="food" value="artichoke">
+      </p>
+        
+      <p>
+         <label for="gender">Are you female?:</label>
+
+          Yes: <input type="radio" name="female" id="femaleYes" value="yes" data-parsley-required="true">
+          No: <input type="radio" name="female" id="femaleNo" value="no" >
+      </p>
+
+     
+     <button type="submit" id="submit" name="submit">Submit</button>
+     
+   </form>
+   
+   <script type="text/javascript">
+     $("#myNewForm").parsley();
+   </script>
+  </body>  
+</html>
