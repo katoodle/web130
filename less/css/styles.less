@@ -87,26 +87,8 @@ a {
     }}
   }
 }
-//this is what i nested
-/*.nav li ul {
-  position: absolute;
-  left: -9999px;
-  z-index: 100;
-}
+//above is what i nested
 
-.nav li li a {
-  display: block;
-  background: #1d7a62;
-  position: relative;
-  z-index: 100;
-  border-top: 1px solid #175e4c;
-}
-
-.nav li li li a {
-  background: #249578;
-  z-index: 200;
-  border-top: 1px solid #1d7a62;
-}*/
 
 .nav li {
   position: relative;
@@ -141,19 +123,14 @@ a {
   height: 400px;
   float:left;
   background-color: red;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  .box-sizing(border-box);
+  .columns(150px, 2, 50px, #EEE, solid, 1px);
 }
 
 .news{
-  -moz-column-count:2;
-  -webkit-column-count:2;
-  column-count:2;
-   -moz-column-width:200px;
-  -webkit-column-width:200px;
-  column-width:200px;
-  .gradient(#146a1, lighten(#146a1, 40%),(#a80077, darken, 20%),(#db36a4);
+  .gradient(@fushsia, #a80077, #db36a4);
+  .box-sizing(border-box);
+  
   
 }
 
@@ -168,25 +145,19 @@ a {
   height: 400px;
   float: right;
   background-color: blue;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+   .box-sizing(border-box);
 }
 
 header {
-  background-color:pink;
+  background-color: darken(pink, 10%);
   padding: 1%;
   margin: 1%;
-   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  .box-sizing(border-box);
   clear:both;
   overflow:hidden;
-
 }
 
 .image2{
-  
 }
 
 footer {
@@ -194,9 +165,7 @@ footer {
   clear:both;
    padding: 1%;
   margin: 1%;
-   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+   .box-sizing(border-box);
   overflow:hidden;
   .rounded(50px);
   
@@ -212,11 +181,8 @@ and (max-width: 768px)
    padding: 1%;
    margin: 1%;
    height:800px;
-   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   
-  }
+ }
   
   #side {
     float:right;
@@ -224,17 +190,10 @@ and (max-width: 768px)
     padding: 1%;
    margin: 1%;
    height:800px;
-   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+ 
   } 
   .news{
-  -moz-column-count:1;
-  -webkit-column-count:1;
-  column-count:1;
-   -moz-column-width:300px;
-  -webkit-column-width:300px;
-  column-width:300px;
+  
 }
   
  }
