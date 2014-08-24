@@ -1,0 +1,222 @@
+@import "config.less";
+@import "elements.less";
+
+body, nav, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color:#e6f0a3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+  
+}
+
+.toggleMenu {
+  display: none;
+  background: #666;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.nav {
+  list-style: none;
+  *zoom: 1;
+  position: relative;
+  .gradient(@fushsia, @pink, @pinker);
+}
+
+.nav:before, .nav:after {
+  content: "";
+  display: table;
+}
+
+.nav:after {
+  clear: both;
+}
+
+.nav ul {
+  list-style: none;
+  width: 9em;
+}
+
+.nav a {
+  padding: 10px 15px;
+  color: #fff;
+  *zoom: 1;
+}
+
+.nav > li {
+  float: left;
+  border-top: 1px solid @fushsia;
+  z-index: 200;
+}
+
+.nav > li > a {
+  display: block;
+}
+
+.nav{
+  li{
+    ul{
+      position: absolute;
+  left: -9999px;
+  z-index: 100;
+    }
+    li {
+      a{
+   display: block;
+  background: #1d7a62;
+  position: relative;
+  z-index: 100;
+  border-top: 1px solid #175e4c;
+    }
+    li a{
+      background: #249578;
+  z-index: 200;
+  border-top: 1px solid #1d7a62;
+    }}
+  }
+}
+//above is what i nested
+
+
+.nav li {
+  position: relative;
+}
+
+.nav > li.hover > ul {
+  left: 0;
+}
+
+.nav li li.hover ul {
+  left: 100%;
+  top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .nav > li {
+    float: none;
+  }
+  .nav ul {
+    display: block;
+    width: 100%;
+  }
+  .nav > li.hover > ul, .nav li li.hover ul {
+    position: static;
+  }
+}
+
+#main {
+  width:58%;
+  padding: 1%;
+  margin: 1%;
+  height: 400px;
+  float:left;
+  background-color: #71ceef;
+  .box-sizing(border-box);
+  .columns(150px, 2, 50px, #EEE, solid, 1px);
+  .rounded(50px);
+}
+
+.news{
+  .gradient(@fushsia, @pink, @pinker);
+  .box-sizing(border-box);
+}
+
+#content{
+
+}
+
+#side {
+  width: 38%;
+  padding: 1%;
+  margin: 1%;
+  height: 400px;
+  float: right;
+  background-color: blue;
+   .box-sizing(border-box);
+  .rounded(50px);
+}
+
+header {
+  background-color: darken(pink, 10%);
+  padding: 1%;
+  margin: 1%;
+  .box-sizing(border-box);
+  clear:both;
+  overflow:hidden;
+  .rounded(50px);
+}
+
+.image2{
+}
+
+footer {
+  background-color:#a4b357;
+  clear:both;
+   padding: 1%;
+  margin: 1%;
+   .box-sizing(border-box);
+  overflow:hidden;
+  .rounded(50px);
+  
+}
+
+//iPads (portrait)
+@media all and (min-width: 481px)
+and (max-width: 768px) 
+ {
+ #main {
+    float:left;
+   width: 58%;
+   padding: 1%;
+   margin: 1%;
+   height:800px;
+  
+ }
+  
+  #side {
+    float:right;
+    width:38%;
+    padding: 1%;
+   margin: 1%;
+   height:800px;
+ 
+  } 
+  .news{
+  
+}
+  
+ }
+//iPads (portrait)
+@media all and (max-width:480px) {
+body {
+  background-color: yellow;
+}
+
+  #main, #side {
+    float:none;
+    width:98%;
+  } 
+  header h2{
+	  display:none;
+	  }
+	#side p,ol, footer{
+		font-size:0.8em;
+		}
+}
+
+
+/* end of media query */
+
